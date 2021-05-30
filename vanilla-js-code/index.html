@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Rick and Morty Characters</title>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="filter">
+      <div class="filter-div">
+        <p>Name</p>
+        <input type="text" class="name-input" name-input>
+      </div>
+    </div>
+
+    <div class="filter">
+      <p>Gender</p>
+      <select name="" id="gender-selector">
+        <option value="all">All</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+
+    <div class="filter">
+      <p>Status</p>
+      <select name="" id="status-selector">
+        <option value="all">All</option>
+        <option value="alive">Alive</option>
+        <option value="dead">Dead</option>
+      </select>
+    </div>
+
+    <div class="filter">
+
+    </div>
+
+    <button class="get-button" get-button>Get Characters</button>
+
+  </header>
+
+  <div class="results" results></div>
+
+  <div class="page-button-container" page-buttons> </div>
+
+  <p class="copyright">
+    Rick and Morty is created by Justin Roiland and Dan Harmon for Adult Swim. The data and images are used without
+    claim of ownership and belong to their respective owners.
+  </p>
+</body>
+
+
+</html>

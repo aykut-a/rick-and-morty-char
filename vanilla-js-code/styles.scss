@@ -1,0 +1,178 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root{
+  --blue: rgb(19, 101, 194);
+  --dblue: rgb(6, 35, 114);
+  --dgreen: rgb(1, 32, 1);
+  --green: rgb(12, 218, 12);
+  --vgreen: rgb(0, 10, 0);
+}
+
+@mixin centered{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+body{
+  background-color: var(--vgreen);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header{
+  @include centered;
+  justify-content: space-evenly;
+  background-color: var(--dgreen);
+  height:4rem;
+}
+
+.filter{
+  @include centered;
+  flex-direction:row;
+  padding: 5px 10px;
+  color: var(--green);
+  letter-spacing:2px;
+  position: relative;
+
+  select{
+    margin-left: 1rem;
+    outline: none;
+    background-color: var(--blue);
+    color: white;
+    padding: 5px ;
+    font-size:16px;
+    border: none;
+    cursor: pointer;
+    transition:box-shadow 200ms;
+  }
+  select:hover{
+    box-shadow: 0 0 10px 0 var(--green);
+  }
+}
+
+.filter-div{
+  @include centered;
+}
+
+.name-input{
+  margin-left: .5rem;
+  outline: none;
+  padding:  5px;
+  border: none;
+  border-bottom: 1px solid var(--blue);
+  color: var(--green);
+  transition: border-bottom 200ms;
+  background-color:transparent;
+}
+
+.name-input:focus{
+  border-bottom: 1px solid var(--green);
+}
+
+.get-button{
+  padding: 5px 10px;
+  font-size:18px;
+  background-color: var(--dblue);
+  border: 2px solid var(--blue);
+  color: white;
+  transition: background-color 200ms;
+  cursor: pointer;
+}
+
+.get-button:hover{
+  background-color: var(--blue);
+}
+
+// Results
+.results{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+}
+
+// Cards Styling 
+.character-card{
+  margin: 1rem;
+  width: 300px;
+  height:470px;
+  justify-content:space-between;
+  background-color: white;
+  border-radius: 1rem;
+  transition: transform 200ms;
+  p{
+    padding: 0 10px;
+  }
+}
+
+.character-card:hover{
+  transform: scale(1.1);
+}
+
+.character-image{
+  width:300px;
+  height:300px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  object-fit: cover;
+}
+
+span.bold{
+  font-weight: bold;
+}
+
+// Button container
+
+.page-button-container{
+  @include centered;
+  flex-wrap: wrap;
+  margin:2rem 0;
+}
+
+.page-button{
+  @include centered;
+  width:1.2rem;
+  height:1.2rem;
+  border-radius: 2px;
+  font-size:12px;
+  margin: 10px 5px;
+  background-color:rgb(1, 32, 1);
+  color: var(--green);
+  border: none;
+  cursor: pointer;
+  transition: background-color 200ms;
+}
+
+.page-button:hover{
+  background-color: var(--green);
+  color: var(--vgreen);
+}
+
+.shown-page-button{
+  background-color: var(--blue)
+}
+
+p.copyright{
+  color: var(--green);
+  margin: 1rem auto;
+}
+
+// Responsiveness uwu
+
+@media (max-width: 900px){
+  header{
+    flex-wrap: wrap;
+    height:fit-content;
+  }
+
+  p.copyright{
+    padding: 5px;
+  }
+}
